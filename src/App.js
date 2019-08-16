@@ -6,6 +6,8 @@ import ChannelContainer from "./components/channels/ChannelContainer";
 import withAuth from './components/auth/withAuth'
 import { Switch, Link, Route } from "react-router-dom";
 import {Container, Menu} from "semantic-ui-react";
+import { connect } from 'react-redux'
+
 import {API_URL} from "./API";
 import Logout from "./components/auth/Logout";
 
@@ -59,6 +61,8 @@ class App extends React.Component {
                     <Menu.Item name="posts" active={activeItem === 'posts'} onClick={this.handleItemClick} as={Link} to={'/posts'}>Posts</Menu.Item>
                     <Menu.Item name="channels" active={activeItem === 'channels'} onClick={this.handleItemClick} as={Link} to={'/channels'}>Channels</Menu.Item>
 
+                    <Menu.Item onClick={() => this.props.add_state('meh')}>Add To State</Menu.Item>
+
                 </Menu>
                 <Switch>
                     <Route path="/logout" render={routeProps => <Logout {...routeProps} logout={this.logout} />} />
@@ -71,4 +75,16 @@ class App extends React.Component {
     }
 }
 
-export default App;
+const msp = state => {
+    return {
+        arr: state
+    }
+}
+
+const mdp = dispatch => {
+    return {
+        user_auth: data => {dispatch({type: 'USER_AUTH', payload: data})}
+    }
+}
+
+export default connect(msp, mdp)(App);

@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4397c9c3-5c31-44f8-83ea-35eb891ec21f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/auth/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/withAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/PostContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/PostForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/Posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +28,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="sshConsole" />
   </component>
   <component name="RecentsManager">
@@ -70,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565631824321</updated>
-      <workItem from="1565631826477" duration="27145000" />
+      <workItem from="1565631826477" duration="30689000" />
     </task>
     <servers />
   </component>
