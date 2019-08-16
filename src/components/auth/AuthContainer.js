@@ -3,6 +3,6 @@ import LoginForm from "./LoginForm";
 
 export default class AuthContainer extends React.Component{
     render() {
-        return <LoginForm />
+        return <LoginForm login={this.props.login}/>
     }
 }

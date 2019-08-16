@@ -1,6 +1,7 @@
 import React from 'react'
 import PostForm from './PostForm'
 import Posts from './Posts'
+import {API_URL} from "../../API";
 
 export default class PostContainer extends React.Component {
 
@@ -9,7 +10,7 @@ export default class PostContainer extends React.Component {
     };
 
     fetchPosts = () => {
-        return fetch('http://localhost:3333/posts')
+        return fetch(API_URL + 'posts')
             .then(resp => resp.json())
     };
 
@@ -19,7 +20,7 @@ export default class PostContainer extends React.Component {
     }
 
     createPost = post => {
-        fetch('http://localhost:3333/posts', {
+        fetch(API_URL + 'posts', {
             method: 'POST',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify(post)
