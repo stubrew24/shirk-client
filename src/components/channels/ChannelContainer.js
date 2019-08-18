@@ -19,6 +19,11 @@ export default class ChannelContainer extends React.Component {
             .then(res => res.json())
     };
 
+    fetchUserChannels = () => {
+        return fetch(API_URL + 'userchannels')
+            .then(res => res.json())
+    };
+
     componentDidMount() {
         this.fetchChannels()
             .then(channels => this.setState({channels}))
