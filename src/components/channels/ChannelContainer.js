@@ -5,8 +5,9 @@ import {Grid} from "semantic-ui-react";
 import CreateChannel from "./CreateChannel";
 import {API_URL} from "../../API";
 import BrowseChannels from "./BrowseChannels";
+import { connect } from 'react-redux'
 
-export default class ChannelContainer extends React.Component {
+class ChannelContainer extends React.Component {
 
     state = {
         channels: [],
@@ -14,15 +15,21 @@ export default class ChannelContainer extends React.Component {
         channel: null
     };
 
-    fetchChannels = () => {
-        return fetch(API_URL + 'channels')
+    getUserChannels = () => {
+        return fetch(API_URL + 'channels/' + this.props.user._id)
             .then(res => res.json())
-    };
+    }
 
     componentDidMount() {
-        this.fetchChannels()
-            .then(channels => this.setState({channels}))
-    };
+        this.getUserChannels()
+            .then(channels => {
+                if (channels){
+                    this.setState({channels})
+                } else {
+                    this.setState({channels: []})
+                }
+            })
+    }
 
     activePanel = () => {
         switch (this.state.active) {
@@ -31,7 +38,7 @@ export default class ChannelContainer extends React.Component {
             case 'create':
                 return <CreateChannel createChannel={this.createChannel} />;
             case 'browse':
-                return <BrowseChannels />
+                return <BrowseChannels userId={this.props.user._id}/>
             default:
                 return null;
         }
@@ -52,7 +59,6 @@ export default class ChannelContainer extends React.Component {
     }
 
     render() {
-        if (this.state.channels.length === 0) return <div>Loading...</div>;
         return (
                 <Grid>
                     <Grid.Row>
@@ -67,3 +73,5 @@ export default class ChannelContainer extends React.Component {
         );
     }
 }
+
+export default connect(state => ({user: state.user}))(ChannelContainer)

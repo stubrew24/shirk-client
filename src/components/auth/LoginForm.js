@@ -32,7 +32,7 @@ class LoginForm extends React.Component{
         })
             .then(res => {
                 if(res.status === 200) {
-                    this.props.login()
+                    this.props.login();
                     this.props.history.push(this.state.redirect);
                 }
             })

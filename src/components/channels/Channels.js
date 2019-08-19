@@ -15,8 +15,12 @@ export default class Channels extends React.Component {
                     <Menu.Header>Channels</Menu.Header>
 
                     <Menu.Menu>
-                         {this.props.channels.map((channel, index) => <Menu.Item key={index} onClick={() => this.props.handleClick('channel', channel._id)} active={this.props.active === channel._id}><Icon name='hashtag'/>{channel.name}</Menu.Item>)}
-                    </Menu.Menu>
+                        {this.props.channels.length > 0 ?
+                            this.props.channels.map((channel, index) => <Menu.Item key={index} onClick={() => this.props.handleClick('channel', channel._id)} active={this.props.active === channel._id}><Icon name='hashtag'/>{channel.name}</Menu.Item>)
+                            :
+                            <Menu.Item content="You haven't joined any channels." />
+                        }
+                         </Menu.Menu>
                 </Menu.Item>
                 <Menu.Item>
                     <Icon name='plus circle' />
