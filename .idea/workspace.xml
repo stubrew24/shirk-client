@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4397c9c3-5c31-44f8-83ea-35eb891ec21f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/Channel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/Channel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/FeedContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/FeedContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/FeedMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/FeedMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/Message.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +83,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/channels/Message.jsx</url>
           <line>85</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
