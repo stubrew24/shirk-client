@@ -12,12 +12,12 @@ import {
 
 class Register extends React.Component {
   state = {
-    firstName: "1",
-    lastName: "1",
-    username: "1",
-    email: "1",
-    password: "1",
-    confirmPassword: "1",
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
     errors: [],
     imagefile: null,
     redirect: "/channels"

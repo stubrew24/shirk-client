@@ -5,11 +5,12 @@ import Register from "./components/auth/Register";
 import ChannelContainer from "./components/channels/ChannelContainer";
 import withAuth from "./components/auth/withAuth";
 import { Redirect, Switch, Link, Route } from "react-router-dom";
-import { Container, Menu, Input } from "semantic-ui-react";
+import { Container, Menu, Input, Dropdown } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
 import { API_URL } from "./API";
+import Details from "./components/user/Details";
 
 class App extends React.Component {
   constructor(props) {
@@ -71,9 +72,16 @@ class App extends React.Component {
                 Login
               </Menu.Item>
             ) : (
-              <Menu.Item name="logout" onClick={this.logout}>
-                Logout
-              </Menu.Item>
+              <Dropdown item direction={"left"} text={this.props.user.username}>
+                <Dropdown.Menu>
+                  <Dropdown.Item
+                    text="Update Details"
+                    as={Link}
+                    to="/details"
+                  />
+                  <Dropdown.Item text="Logout" onClick={this.logout} />
+                </Dropdown.Menu>
+              </Dropdown>
             )}
           </Menu.Menu>
         </Menu>
@@ -98,6 +106,7 @@ class App extends React.Component {
             component={withAuth(ChannelContainer)}
             userAuth={this.userAuth}
           />
+          <Route path="/details" exact component={withAuth(Details)} />
           <Route
             path="/channels/:channelId"
             exact

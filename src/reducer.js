@@ -4,6 +4,7 @@ const clearUser = {
   lastName: "",
   email: "",
   username: "",
+  avatar: "",
   channels: []
 };
 
@@ -14,6 +15,15 @@ export const reducer = (
   switch (action.type) {
     case "USER_AUTH":
       return { ...state, user: { ...action.payload } };
+    case "UPDATE_USER":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          username: action.payload.username,
+          avatar: action.payload.avatar
+        }
+      };
     case "LOGOUT":
       return { ...state, user: clearUser };
     case "UPDATE_CHANNELS":
