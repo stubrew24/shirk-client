@@ -15,9 +15,10 @@ const FeedMessage = props => {
         <Feed.Label>
           <img
             src={
-              props.userId.avatar
-                ? API_URL + "uploads/" + props.userId.avatar
-                : "https://icon-library.net/images/default-user-icon/default-user-icon-13.jpg"
+              API_URL +
+              `uploads/${
+                props.userId.avatar ? props.userId.avatar : "default.jpg"
+              }`
             }
             alt="avatar"
             style={{ width: "3em", height: "3em", objectFit: "cover" }}

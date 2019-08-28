@@ -15,7 +15,6 @@ class LoginForm extends React.Component {
   state = {
     username: "",
     password: "",
-    message: "",
     redirect: "/channels"
   };
 
@@ -53,13 +52,6 @@ class LoginForm extends React.Component {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          {this.props.location.state ? (
-            <Message negative>
-              <Message.Header>
-                {this.props.location.state.message}
-              </Message.Header>
-            </Message>
-          ) : null}
           <Form
             size="large"
             inverted

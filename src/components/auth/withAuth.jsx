@@ -33,7 +33,7 @@ export default function withAuth(ComponentToProtect) {
                 return null;
             }
             if (redirect) {
-                return <Redirect to={{pathname: '/login', state: {message: 'You must be logged in to view this page.', path: this.props.location.pathname}}} />;
+                return <Redirect to='/login' />;
             }
             return (
                 <React.Fragment>
