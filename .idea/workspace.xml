@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4397c9c3-5c31-44f8-83ea-35eb891ec21f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sswewll.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/channels/FeedContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/channels/FeedMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/channels/Message.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/withAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/withAuth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/BrowseChannels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/BrowseChannels.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/channels/Channel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/Channel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/ChannelContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/ChannelContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/Channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/Channels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/channels/CreateChannel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/CreateChannel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/channels/FeedContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/FeedContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/channels/FeedMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/FeedMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/channels/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/channels/Message.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +88,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/channels/Message.jsx</url>
-          <line>78</line>
+          <line>85</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>

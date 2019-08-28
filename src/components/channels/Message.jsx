@@ -3,7 +3,13 @@ import {Form, TextArea} from "semantic-ui-react";
 import { connect } from 'react-redux'
 import {API_URL} from "../../API";
 
+
 class Message extends React.Component{
+
+  constructor(props) {
+    super(props)
+    this.props.typemessage()
+  }
 
   state = {
     channelId: null,
@@ -33,6 +39,7 @@ class Message extends React.Component{
   }
 
   handleChange = e => {
+    this.props.typingEmit(this.props.user.username)
     this.setState({content: e.target.value})
   }
 
@@ -53,7 +60,7 @@ class Message extends React.Component{
     })
       .then(res => res.json())
       .then(msg => {
-        this.props.pushMessage(msg)
+        this.props.sendMessage()
         this.setState({content: '', dateCreated: null})
       });
   };

@@ -12,13 +12,14 @@ import {
 
 class Register extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    firstName: "1",
+    lastName: "1",
+    username: "1",
+    email: "1",
+    password: "1",
+    confirmPassword: "1",
     errors: [],
+    imagefile: null,
     redirect: "/channels"
   };
 
@@ -30,11 +31,18 @@ class Register extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const data = new FormData();
+    data.append("avatar", this.state.imagefile);
+    data.append("firstName", this.state.firstName);
+    data.append("lastName", this.state.lastName);
+    data.append("username", this.state.username);
+    data.append("email", this.state.email);
+    data.append("password", this.state.password);
+
     fetch(API_URL + "register", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       credentials: "include",
-      body: JSON.stringify(this.state)
+      body: data
     }).then(res => {
       if (res.status === 200) {
         this.props.login();
@@ -63,6 +71,7 @@ class Register extends React.Component {
             inverted
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}
+            enctype="multipart/form-data"
           >
             <Header inverted>Sign Up</Header>
             <Segment stacked inverted>
@@ -119,6 +128,14 @@ class Register extends React.Component {
                 placeholder="Confirm Password"
                 type="password"
                 value={this.state.confirmPassword}
+              />
+              <Form.Input
+                fluid
+                type="file"
+                iconPosition="left"
+                icon="file image outline"
+                name="imageFile"
+                onChange={e => this.setState({ imagefile: e.target.files[0] })}
               />
               <Button fluid size="large" inverted basic>
                 Register

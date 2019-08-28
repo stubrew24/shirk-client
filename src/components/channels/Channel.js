@@ -1,13 +1,48 @@
 import React from "react";
 import { API_URL } from "../../API";
-import { Grid, Dropdown } from "semantic-ui-react";
+import { Grid, Dropdown, Form, Container } from "semantic-ui-react";
 import Message from "./Message";
 import FeedContainer from "./FeedContainer";
 import { connect } from "react-redux";
+import openSocket from "socket.io-client";
+
+const socket = openSocket("http://localhost:4000");
 
 class Channel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.getmessages();
+  }
+
   state = {
-    channel: {}
+    channel: {},
+    typing: null
+  };
+
+  typemessage = () => {
+    socket.on("typing", (user, id) => {
+      if (
+        user &&
+        id === this.props.channel &&
+        user !== this.props.user.username
+      ) {
+        this.setState({ typing: `${user} is typing..` });
+      } else if (!user) {
+        this.setState({ typing: null });
+      }
+    });
+  };
+
+  typingEmit = username => {
+    socket.emit("typing", username, this.props.channel);
+  };
+
+  getmessages = () => {
+    socket.on("posts", (posts, id) => {
+      if (id === this.props.channel) {
+        this.props.loadMessages(posts);
+      }
+    });
   };
 
   fetchChannel = () => {
@@ -35,6 +70,10 @@ class Channel extends React.Component {
     }
   }
 
+  sendMessage = () => {
+    socket.emit("get messages", this.props.channel);
+  };
+
   render() {
     return (
       <Grid stackable>
@@ -59,17 +98,17 @@ class Channel extends React.Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={16}>
-            <FeedContainer
-              messages={this.props.messages.slice(
-                this.props.messages.length - 10,
-                this.props.messages.length
-              )}
-            />
+            <FeedContainer messages={this.props.messages} />
 
             <Message
               onKeyDown={this.onKeyDown}
               channelId={this.state.channel._id}
+              typemessage={this.typemessage}
+              typingEmit={this.typingEmit}
+              sendMessage={this.sendMessage}
             />
+
+            <Container content={this.state.typing} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
